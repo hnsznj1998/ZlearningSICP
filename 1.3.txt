@@ -1,0 +1,11 @@
+(define (sos x y)
+	(+ (* x x) (* y y)))
+
+(define (Bsos x y z)
+	(if (> x y)
+		(if (> y z)
+			(sos x y)
+			(sos x z))
+		(if (> x z)
+			(sos x y)
+			(sos y z))))
